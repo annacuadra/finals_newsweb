@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login</title>
+</head>
+<body background="img/1.jpg">
+   <div class="box">
+    <div class="container">
+
+        <div class="top">
+            <header>Login</header>
+        </div>
+
+        <form name="login" action="login.php" onsubmit="return check()" method="POST">
+            <div class="input-field">
+                <input type="text" class="user" placeholder="Username" name="username" id="username">
+                <i class='bx bx-user' ></i>
+            </div>
+
+            <div class="input-field">
+                <input type="password" class="pass" placeholder="Password" name="password" id="password">
+                <i class='bx bx-lock-alt'></i>
+            </div>
+
+            <div class="input-field">
+                <input type="submit" class="submit" value="Login" id="lgnBtn">
+            </div>
+        </form>
+
+        <script>
+            function check() {
+                const username = document.forms["login"]["username"].value;
+                const password = document.forms["login"]["password"].value;
+                if (username === "" || password === "") {
+                    alert("Please enter a valid username and password.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+
+        <div class="two-col">
+            <div class="one">
+               <input type="checkbox" name="" id="check">
+               <label for="check"> Remember Me</label>
+            </div>
+            <div class="two">
+                <label><a href="#">Forgot password?</a></label>
+            </div>
+        </div>
+    </div>
+</div>  
+</body>
+</html>
