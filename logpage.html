@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>News Website</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
   <header id="nav-menu" aria-label="navigation bar">
     <div class="container">
       <div class="nav-start">
         <div class="logo">
-          <a href="#"><img src="img/logo2.png" alt="Logo" width="200" /></a>
+          <a href="index.html"><img src="img/logo2.png" alt="Logo" width="200" /></a>
         </div>
 
         <nav class="menu">
@@ -34,8 +33,8 @@
           <form id="search-form" class="search" role="search">
             <input id="search-input" type="search" name="search" placeholder="Search" />
             <i class="bx bx-search" aria-hidden="true"></i>
-          </form>
-          <a href="logpage.html" id="user-icon">
+          </form>          
+          <a href="logpage.html">
             <img src="img/user-icon.jpg" alt="User Image" width="40" height="40" />
           </a>
         </div>
@@ -47,13 +46,36 @@
     </div>
   </header>
 
-  <main id="news-container">
-    <div class="card">
-      <img src="" alt="Card Image" />
-    </div>
-  </main>
+    <div class="box">
+        <div class="login-container">
+            <div class="top">
+                <header class="login">LOGIN</header>
+            </div>
+
+            <form name="login" action="php/login.php" onsubmit="return check()" method="POST">
+                <div class="input-field">
+                    <i id="log-user" class='bx bx-user' ></i>
+                    <input type="text" class="user" placeholder="Username" name="username" id="username">
+                </div>
+
+                <div class="input-field">
+                    <i id="log-pass" class='bx bx-lock-alt'></i>
+                    <input type="password" class="pass" placeholder="Password" name="password" id="password">
+                </div>
+
+                <label><a class="fpass" href="forgot_pass.html">Forgot password?</a></label>
+                
+                <div class="input-field">
+                    <input type="submit" class="submit" value="LOGIN" id="lgnBtn">
+                </div>
+
+                <div class="input-field">
+                  <a href="register.html" class="register">REGISTER</a>
+              </div>
+            </form>
+        </div>
+    </div> 
 
   <script src="script.js"></script>
 </body>
-
 </html>
