@@ -84,7 +84,3 @@
     renderMain(data.articles);
   }
 //END OF SEARCH BAR
-
-function redirectToBusiness() {
-  window.location.href = "index.html?search=business";
-}
