@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>News Website</title>
+  <title>Reset Password</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
   <header id="nav-menu" aria-label="navigation bar">
     <div class="container">
       <div class="nav-start">
         <div class="logo">
-          <a href="#"><img src="img/logo2.png" alt="Logo" width="200" /></a>
+          <a href="index.html"><img src="img/logo2.png" alt="Logo" width="200" /></a>
         </div>
 
         <nav class="menu">
           <ul class="menu-bar">
             <li><a class="nav-link" href="index.html" onclick="Search('latest')">HOME</a></li>
-            <li><a class="nav-link" href="index.html#business" onclick="redirectToBusiness()">BUSINESS</a></li>
+            <li><a class="nav-link" href="index.html#business" onclick="Search('business')">BUSINESS</a></li>
             <li><a class="nav-link" href="index.html#food" onclick="Search('food')">FOOD</a></li>
             <li><a class="nav-link" href="index.html#health" onclick="Search('health')">HEALTH</a></li>
             <li><a class="nav-link" href="index.html#movies" onclick="Search('movies')">MOVIES</a></li>
@@ -35,8 +34,8 @@
           <form id="search-form" class="search" role="search">
             <input id="search-input" type="search" name="search" placeholder="Search" />
             <i class="bx bx-search" aria-hidden="true"></i>
-          </form>
-          <a href="logpage.html" id="user-icon">
+          </form>          
+          <a href="logpage.html">
             <img src="img/user-icon.jpg" alt="User Image" width="40" height="40" />
           </a>
         </div>
@@ -48,13 +47,39 @@
     </div>
   </header>
 
-  <main id="news-container">
-    <div class="card">
-      <img src="" alt="Card Image" />
-    </div>
-  </main>
+    <div class="box">
+        <div class="resetpass-container">
+            <div class="top">
+                <header class="resetpass">RESET PASSWORD</header>
+            </div>
+
+            <form name="resetpass" action="php/change_pass.php" method="POST">
+                <div class="input-field">
+                    <i id="log-user" class='bx bx-envelope' ></i>
+                    <input type="text" class="email" placeholder="Email" name="email" id="email" required>
+                </div>
+
+                <div class="input-field">
+                    <i id="log-pass" class='bx bx-lock-alt'></i>
+                    <input type="password" class="pass" placeholder="Password" name="password" id="password" required>
+                </div>
+
+                <div class="input-field">
+                  <i id="log-pass" class='bx bx-lock-alt'></i>
+                  <input type="password" class="pass" placeholder="Confirm Password" name="c_password" id="c_password" required>
+                </div>
+
+                <div class="input-field">
+                  <input type="submit" class="submit" value="RESET PASSWORD" id="resetBtn">
+                </div>
+
+                <div class="input-field">
+                  <p style="text-align: center;"><a href="forgot_pass.html" style="color: #900F1B; text-align: center;"><b>RETURN</b></a></p>
+                </div>
+            </form>
+        </div>
+    </div> 
 
   <script src="script.js"></script>
 </body>
-
 </html>

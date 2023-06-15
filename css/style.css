@@ -273,7 +273,7 @@ main {
   min-height: 80vh;
 }
 
-.login, .r-head, .forgotpass {
+.login, .r-head, .forgotpass, .resetpass {
   color: #900F1B;
   font-size: 30px;
   display: flex;
@@ -291,7 +291,7 @@ main {
   font-weight: 1000;
 }
 
-.login-container, .register-container, .forgotpass-container {
+.login-container, .register-container, .forgotpass-container, .resetpass-container {
   width: 350px;
   display: flex;
   flex-direction: column;
@@ -312,10 +312,6 @@ main {
   padding-left: 40px;
   background:#8484843f;
   outline: none;
-}
-
-.user, .pass {
-  width: 500px; 
 }
 
 .submit{
@@ -356,4 +352,8 @@ main {
 .register {
   color: #900F1B;
   padding-left: 120px;
+}
+
+.log-email {
+  padding-top: 20px;
 }

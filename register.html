@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>News Website - Register</title>
+  <title>Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -15,13 +18,13 @@
 
         <nav class="menu">
           <ul class="menu-bar">
-            <li><a class="nav-link" href="index.html">HOME</a></li>
-            <li><a class="nav-link" href="index.html#business">BUSINESS</a></li>
-            <li><a class="nav-link" href="index.html#food">FOOD</a></li>
-            <li><a class="nav-link" href="index.html#health">HEALTH</a></li>
-            <li><a class="nav-link" href="index.html#movies">MOVIES</a></li>
-            <li><a class="nav-link" href="index.html#politics">POLITICS</a></li>
-            <li><a class="nav-link" href="index.html#technology">TECHNOLOGY</a></li>
+            <li><a class="nav-link" href="index.html" onclick="Search('latest')">HOME</a></li>
+            <li><a class="nav-link" href="index.html#business" onclick="Search('business')">BUSINESS</a></li>
+            <li><a class="nav-link" href="index.html#food" onclick="Search('food')">FOOD</a></li>
+            <li><a class="nav-link" href="index.html#health" onclick="Search('health')">HEALTH</a></li>
+            <li><a class="nav-link" href="index.html#movies" onclick="Search('movies')">MOVIES</a></li>
+            <li><a class="nav-link" href="index.html#politics" onclick="Search('politics')">POLITICS</a></li>
+            <li><a class="nav-link" href="index.html#technology" onclick="Search('tech')">TECHNOLOGY</a></li>
           </ul>
         </nav>
       </div>
@@ -31,7 +34,7 @@
           <form id="search-form" class="search" role="search">
             <input id="search-input" type="search" name="search" placeholder="Search" />
             <i class="bx bx-search" aria-hidden="true"></i>
-          </form>
+          </form>          
           <a href="logpage.html">
             <img src="img/user-icon.jpg" alt="User Image" width="40" height="40" />
           </a>
@@ -44,47 +47,43 @@
     </div>
   </header>
 
-  <div class="box">
-    <div class="register-container">
-      <div class="top">
-        <header class="r-head">REGISTER</header>
-      </div>
+    <div class="box">
+        <div class="register-container">
+            <div class="top">
+                <header class="r-head">REGISTER</header>
+            </div>
 
-      <form name="register" action="php/register.php" onsubmit="return validate()" method="POST">
-        <div class="input-field">
-          <input type="text" class="name" placeholder="First Name" name="firstname" id="firstname" required>
-        </div>
+            <form name="register" action="php/registration.php" method="POST">
+                <div class="input-field">
+                    <i id="log-user" class='bx bx-envelope' ></i>
+                    <input type="text" class="email" placeholder="Email" name="email" id="email" required>
+                </div>
 
-        <div class="input-field">
-          <input type="text" class="name" placeholder="Last Name" name="lastname" id="lastname" required>
-        </div>
+                <div class="input-field">
+                    <i id="log-user" class='bx bx-user' ></i>
+                    <input type="text" class="user" placeholder="Username" name="username" id="username" required>
+                </div>
 
-        <div class="input-field">
-          <input type="text" class="email" placeholder="Email" name="email" id="email" required>
-        </div>
+                <div class="input-field">
+                    <i id="log-pass" class='bx bx-lock-alt'></i>
+                    <input type="password" class="pass" placeholder="Password" name="password" id="password" required>
+                </div>
 
-        <div class="input-field">
-          <input type="text" class="user" placeholder="Username" name="username" id="username" required>
+                <div class="input-field">
+                  <i id="log-pass" class='bx bx-lock-alt'></i>
+                  <input type="password" class="pass" placeholder="Confirm Password" name="c_password" id="c_password" required>
+                </div>
+                
+                <div class="input-field">
+                  <input type="submit" class="submit" value="REGISTER" id="registerBtn">
+                </div>
+        
+                <div class="input-field">
+                  <p style="text-align: center;">Already have an account? <a href="logpage.html" style="color: #900F1B;"><b>LOGIN</b></a></p>
+                </div>
+            </form>
         </div>
-
-        <div class="input-field">
-          <input type="password" class="pass" placeholder="Password" name="password" id="password" required>
-        </div>
-
-        <div class="input-field">
-          <input type="password" class="pass" placeholder="Confirm Password" name="confirm_password" id="confirm_password" required>
-        </div>
-
-        <div class="input-field">
-          <input type="submit" class="submit" value="REGISTER" id="registerBtn">
-        </div>
-
-        <div class="input-field">
-          <p style="text-align: center;">Already have an account? <a href="logpage.html" style="color: #900F1B;"><b>LOGIN</b></a></p>
-        </div>
-      </form>
-    </div>
-  </div>
+    </div> 
 
   <script src="script.js"></script>
 </body>

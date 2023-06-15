@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>News Website</title>
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -18,7 +19,7 @@
         <nav class="menu">
           <ul class="menu-bar">
             <li><a class="nav-link" href="index.html" onclick="Search('latest')">HOME</a></li>
-            <li><a class="nav-link" href="index.html#business" onclick="Search('business')">BUSINESS</a></li>
+            <li><a id="business-link" class="nav-link" href="index.html#business" onclick="Search('business')">BUSINESS</a></li>
             <li><a class="nav-link" href="index.html#food" onclick="Search('food')">FOOD</a></li>
             <li><a class="nav-link" href="index.html#health" onclick="Search('health')">HEALTH</a></li>
             <li><a class="nav-link" href="index.html#movies" onclick="Search('movies')">MOVIES</a></li>
@@ -52,15 +53,15 @@
                 <header class="login">LOGIN</header>
             </div>
 
-            <form name="login" action="php/login.php" onsubmit="return check()" method="POST">
+            <form name="login" action="php/login.php" method="POST">
                 <div class="input-field">
                     <i id="log-user" class='bx bx-user' ></i>
-                    <input type="text" class="user" placeholder="Username" name="username" id="username">
+                    <input type="text" class="user" placeholder="Username" name="username" id="username" required>
                 </div>
 
                 <div class="input-field">
                     <i id="log-pass" class='bx bx-lock-alt'></i>
-                    <input type="password" class="pass" placeholder="Password" name="password" id="password">
+                    <input type="password" class="pass" placeholder="Password" name="password" id="password" required>
                 </div>
 
                 <label><a class="fpass" href="forgot_pass.html">Forgot password?</a></label>
@@ -71,7 +72,7 @@
 
                 <div class="input-field">
                   <a href="register.html" class="register">REGISTER</a>
-              </div>
+                </div>
             </form>
         </div>
     </div> 
